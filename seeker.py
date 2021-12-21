@@ -32,6 +32,7 @@ import argparse
 import requests
 import subprocess as subp
 
+print("Salutations!")
 curr_dir = os.path.dirname(os.path.realpath(__file__))
 #user = os.environ['USERPROFILE']
 parser = argparse.ArgumentParser()
