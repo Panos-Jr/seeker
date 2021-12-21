@@ -32,6 +32,8 @@ import argparse
 import requests
 import subprocess as subp
 
+curr_dir = os.path.dirname(os.path.realpath(__file__))
+#user = os.environ['USERPROFILE']
 parser = argparse.ArgumentParser()
 parser.add_argument('-s', '--subdomain', help='Provide Subdomain for Serveo URL ( Optional )')
 parser.add_argument('-k', '--kml', help='Provide KML Filename ( Optional )')
@@ -75,6 +77,7 @@ def ver_check():
 				print(C + '[' + G + ' Up-To-Date ' + C +']' + '\n')
 			else:
 				print(C + '[' + G + ' Available : {} '.format(github_ver) + C + ']' + '\n')
+				#{0} can be used.
 		else:
 			print(C + '[' + R + ' Status : {} '.format(ver_sc) + C + ']' + '\n')
 	except Exception as e:
